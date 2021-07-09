@@ -1,4 +1,4 @@
-public class Fanpage extends ContaFacebook{
+public class Fanpage extends ContaFacebook {
     private int nroCurtidas = 0;
 
     public Fanpage(String url, String usr, String oldPsw){
@@ -15,13 +15,13 @@ public class Fanpage extends ContaFacebook{
     }
 
     public int curtir(){
-        this.nroCurtidas += 1;
+        return this.nroCurtidas += 1;
     }
 
     public String toString(){
-        String s = "URL ::: "+this.url+"\n";
-        s += "Usuario ::: "+this.usr+"\n";
-        s += "Senha ::: "+this.oldPsw+"\n";
+        String s = "URL ::: "+super.getUrl()+"\n";
+        s += "Usuario ::: "+super.getUsr()+"\n";
+        s += "Senha ::: "+super.getPsw()+"\n";
         s += "Numero de Curtidas ::: "+this.nroCurtidas+"\n";
         return s;
     }

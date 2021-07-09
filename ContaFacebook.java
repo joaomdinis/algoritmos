@@ -10,6 +10,8 @@ public class ContaFacebook{
         this.oldPsw = oldPsw;
     }
 
+    public ContaFacebook(){}
+
     public String getUrl(){
         return url;
     }
@@ -30,19 +32,19 @@ public class ContaFacebook{
         this.usr = usr;
     }
 
-<<<<<<< HEAD
-    public void setPsw(){
+    public void setPsw() {
         String new_psw = Teclado.leString("Informe a senha atual: ");
 //        System.out.println(this.String pswgetPsw());
-        if(new_psw==this.getPsw()){
-            this.psw = Teclado.leString("Informe a nova senha: ");
+        if (new_psw == this.getPsw()) {
+            this.newPsw = Teclado.leString("Informe a nova senha: ");
             System.out.println("A senha foi alterada com sucesso.");
-=======
+        }
+    }
+
     public String setPsw(String oldPsw, String newPsw){
         if(oldPsw == this.getPsw()){
             this.oldPsw = newPsw;
             return "Senha alterada com sucesso!";
->>>>>>> 93323302ed72e44443fdbdee5792ad337d061f5a
         }
         else{
             return "A senha informada está incorreta.";

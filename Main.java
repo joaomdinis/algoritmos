@@ -24,6 +24,11 @@ public class Main{
 
 //        cnt.setPsw(cnt.getPsw(), "novaSenha");
         System.out.println(cnt.toString());
-        
+
+        //Questoes 7, 8, 9
+        Facebook facebook = new Facebook(1);
+        facebook.insereConta(cnt);
+        System.out.println(facebook.imprimeInformacoesContas());
+        System.out.println(facebook.imprimeURLFanpages());
     }
 }
