@@ -31,7 +31,7 @@ public class ContaFacebook{
 
     public void setPsw(){
         String new_psw = Teclado.leString("Informe a senha atual: ");
-        System.out.println(this.String pswgetPsw());
+//        System.out.println(this.String pswgetPsw());
         if(new_psw==this.getPsw()){
             this.psw = Teclado.leString("Informe a nova senha: ");
             System.out.println("A senha foi alterada com sucesso.");
