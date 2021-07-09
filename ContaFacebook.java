@@ -1,12 +1,13 @@
 public class ContaFacebook{
     private String url;
     private String usr;
-    private String psw;
+    private String oldPsw;
+    private String newPsw;
 
-    public ContaFacebook(String url, String usr, String psw){
+    public ContaFacebook(String url, String usr, String oldPsw){
         this.url = url;
         this.usr = usr;
-        this.psw = psw;
+        this.oldPsw = oldPsw;
     }
 
     public String getUrl(){
@@ -18,7 +19,7 @@ public class ContaFacebook{
     }
 
     public String getPsw(){
-        return psw;
+        return oldPsw;
     }
 
     public void setUrl(String url){
@@ -29,22 +30,29 @@ public class ContaFacebook{
         this.usr = usr;
     }
 
+<<<<<<< HEAD
     public void setPsw(){
         String new_psw = Teclado.leString("Informe a senha atual: ");
 //        System.out.println(this.String pswgetPsw());
         if(new_psw==this.getPsw()){
             this.psw = Teclado.leString("Informe a nova senha: ");
             System.out.println("A senha foi alterada com sucesso.");
+=======
+    public String setPsw(String oldPsw, String newPsw){
+        if(oldPsw == this.getPsw()){
+            this.oldPsw = newPsw;
+            return "Senha alterada com sucesso!";
+>>>>>>> 93323302ed72e44443fdbdee5792ad337d061f5a
         }
         else{
-            System.out.println("A senha informada está incorreta.");
+            return "A senha informada está incorreta.";
         }
     }
 
     public String toString(){
         String s = "URL ::: "+this.url+"\n";
         s += "Usuario ::: "+this.usr+"\n";
-        s += "Senha ::: "+this.psw+"\n";
+        s += "Senha ::: "+this.oldPsw+"\n";
         return s;
     }
 }
