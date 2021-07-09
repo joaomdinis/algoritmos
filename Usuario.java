@@ -18,13 +18,14 @@ public class Usuario extends Pessoa {
         return a;
     }
 
-    public void addAmigo(Pessoa amigo) {
+    public boolean insereAmigo(Pessoa amigo) {
         for(int i =0; i < amigos.length; i++) {
             if(amigos[i] == null) {
                 amigos[i] = amigo;
-                return;
+                return true;
             }
         }
+        return false;
     }
 
     public String toString() {
