@@ -13,11 +13,11 @@ public class ContaFacebook{
         return url;
     }
 
-    public int getUsr(){
+    public String getUsr(){
         return usr;
     }
 
-    public int getPsw(){
+    public String getPsw(){
         return psw;
     }
 
@@ -29,14 +29,22 @@ public class ContaFacebook{
         this.usr = usr;
     }
 
-    public void setPsw(String psw){
-        this.psw = psw;
+    public void setPsw(){
+        String new_psw = Teclado.leString("Informe a senha atual: ");
+        System.out.println(this.String pswgetPsw());
+        if(new_psw==this.getPsw()){
+            this.psw = Teclado.leString("Informe a nova senha: ");
+            System.out.println("A senha foi alterada com sucesso.");
+        }
+        else{
+            System.out.println("A senha informada está incorreta.");
+        }
     }
 
     public String toString(){
-        String s = "[URL] "+this.url+"\n";
-        s += "[Usuário] "+this.usr+"\n";
-        s += "[Senha] "+this.psw+"\n";
+        String s = "URL ::: "+this.url+"\n";
+        s += "Usuario ::: "+this.usr+"\n";
+        s += "Senha ::: "+this.psw+"\n";
         return s;
     }
 }
